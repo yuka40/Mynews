@@ -41,6 +41,10 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
    'Admin\ProfileController@update');
 });
 
+Route::get('/', 'NewsController@index');
+
+Route::get('/profile', 'ProfileController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
